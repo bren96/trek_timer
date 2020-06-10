@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
 var urlBase = 'https://api.mapbox.com/isochrone/v1/mapbox/';
 var lon = -77.034;
 var lat = 38.899;
-var profile = 'cycling';
+var profile = 'walking';
 var minutes = 10;
 // Create a function that sets up the Isochrone API query then makes an Ajax call
 function getIso() {
@@ -26,14 +26,11 @@ function getIso() {
 // Target the "params" form in the HTML portion of your code
 var params = document.getElementById('params');
 
-// When a user changes the value of profile or duration by clicking a button, change the parameter's value and make the API query again
+// When a user changes the value of duration by clicking a button, change the parameter's value and make the API query again
 params.addEventListener('change', function(e) {
-    if (e.target.name === 'profile') {
-    profile = e.target.value;
-    getIso();
-    } else if (e.target.name === 'duration') {
-    minutes = e.target.value;
-    getIso();
+    if (e.target.name === 'duration') {
+        minutes = (e.target.value/2);
+        getIso();
     }
 });
 var marker = new mapboxgl.Marker({

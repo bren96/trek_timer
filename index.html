@@ -20,35 +20,12 @@
     <div id='map'></div>
     <div class='absolute fl my24 mx24 py24 px24 bg-gray-faint round'>
       <form id='params'>
-        <h4 class='txt-m txt-bold mb6'>Chose a travel mode:</h4>
-        <div class='mb12 mr12 toggle-group align-center'>
-          <label class='toggle-container'>
-            <input name='profile' type='radio' value='walking'>
-            <div class='toggle toggle--active-null toggle--null'>Walking</div>
-          </label>
-          <label class='toggle-container'>
-            <input name='profile' type='radio' value='cycling' checked>
-            <div class='toggle toggle--active-null toggle--null'>Cycling</div>
-          </label>
-          <label class='toggle-container'>
-            <input name='profile' type='radio' value='driving'>
-            <div class='toggle toggle--active-null toggle--null'>Driving</div>
-          </label>
+        <h4 class='txt-m txt-bold mb6'>How many minutes do you have to walk?</h4>
+        <div class='range'>
+          <p>10 min</p>
+          <input type='range' name="duration" min='10' max="60" step="10"/>
+          <p>60 min</p>
         </div>
-        <h4 class='txt-m txt-bold mb6'>Chose a maximum duration:</h4>
-        <div class='mb12 mr12 toggle-group align-center'>
-          <label class='toggle-container'>
-            <input name='duration' type='radio' value='10' checked>
-            <div class='toggle toggle--active-null toggle--null'>10 min</div>
-          </label>
-          <label class='toggle-container'>
-            <input name='duration' type='radio' value='20'>
-            <div class='toggle toggle--active-null toggle--null'>20 min</div>
-          </label>
-          <label class='toggle-container'>
-            <input name='duration' type='radio' value='30'>
-            <div class='toggle toggle--active-null toggle--null'>30 min</div>
-          </label>
       </form>
     </div>
   </body>
